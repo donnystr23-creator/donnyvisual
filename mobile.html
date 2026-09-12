@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donny Satriadi - Portfolio</title>
+  <link rel="stylesheet" href="mobile.css">
+</head>
+<body class="mobile-layout">
+  <div class="loader-screen">
+    <div class="loader-container">
+      <p class="loader-title">LOADING SYSTEM...</p>
+      <div class="loader-bar-wrapper">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+  
+  <header class="mobile-header">
+    <div class="logo-container">
+      <span class="logo">PORTFOLIO</span>
+    </div>
+    <button type="button" id="hamburger-btn" class="hamburger-btn" aria-label="Open Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </header>
+
+  <section id="home" class="mobile-home">
+    <div class="home-hero">
+      <p class="hero-intro">HI, I'M DONNY</p>
+      <h1 class="hero-title">CREATIVE DEVELOPER</h1>
+      <p class="hero-subtitle">TURNING IDEAS INTO REALITY.</p>
+      <div class="hero-buttons">
+        <a href="#work" class="btn btn-work">WORK</a>
+        <a href="#about" class="btn btn-about">ABOUT ME</a>
+        <a href="#contact" class="btn btn-contact">CONTACT</a>
+      </div>
+    </div>
+
+    <div class="character-area">
+      <img src="images/hero-profil.png" alt="Creative Character Illustration" class="character-img">
+    </div>
+  </section>
+
+  <div id="mobile-menu" class="mobile-menu-overlay">
+    <div class="menu-header">
+      <div class="logo-container">
+        <span class="logo">PORTFOLIO</span>
+      </div>
+      <button type="button" id="menu-close-btn" class="close-btn" aria-label="Close Menu">&times;</button>
+    </div>
+
+    <nav class="mobile-nav">
+      <ul class="nav-links">
+        <li><a href="#work" class="nav-link">WORK</a></li>
+        <li><a href="#about" class="nav-link">ABOUT ME</a></li>
+        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-socials">
+      <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+      <a href="#" class="social-link" aria-label="TikTok">TikTok</a>
+      <a href="#" class="social-link" aria-label="YouTube">YouTube</a>
+      <a href="mailto:donnystr23@gmail.com" class="social-link" aria-label="Email">Email</a>
+    </div>
+  </div>
+
+  <section id="work" class="mobile-work">
+    <div class="work-header">
+      <h2 class="section-title">SELECTED WORK</h2>
+      <ul class="work-categories">
+        <li class="category-item active" data-category="design">DESIGN GRAFIS</li>
+        <li class="category-item" data-category="photography">PHOTOGRAPHY</li>
+        <li class="category-item" data-category="motion">MOTION GRAPHIC</li>
+      </ul>
+    </div>
+
+    <div class="carousel-container" id="work-carousel">
+      <div class="carousel-track" id="carousel-track">
+      <div class="carousel-track" id="carousel-track">
+      </div>
+
+      <div class="carousel-indicators" id="carousel-indicators">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="mobile-about">
+    <div class="about-content">
+      <h2 class="section-title">ABOUT ME</h2>
+      
+      <div class="about-bio-container">
+        <div class="about-text-box">
+          <p class="about-desc">
+            I'm a creative person who loves graphic design, photography, and motion graphics.
+          </p>
+          <p class="about-desc">
+            I enjoy turning ideas into visual and digital experiences.
+          </p>
+        </div>
+
+        <div class="about-avatar-wrapper">
+          <div class="retro-window-header">
+            <span class="window-dot"></span>
+            <span class="window-dot1"></span>
+            <span class="window-dot2"></span>
+          </div>
+          <img src="images/about-me.png" alt="Profile Picture" class="profile-img">
+        </div>
+      </div>
+
+      <div class="skills-wrapper">
+        <h3 class="skills-title">SKILLS</h3>
+        <ul class="skills-list" id="skills-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="mobile-contact">
+    <div class="contact-content">
+      <h2 class="section-title">LET'S WORK TOGETHER</h2>
+      <p class="contact-desc">Feel free to reach out for collaborations or project inquiries.</p>
+
+      <form class="contact-form" action="#" method="post">
+        <label for="contact-message" class="visually-hidden">Message</label>
+        <textarea id="contact-message" name="message" class="contact-textarea" placeholder="Write your message here..."></textarea>
+      </form>
+
+      <div class="contact-actions">
+        <a href="#" class="contact-btn whatsapp-btn" target="_blank" rel="noopener noreferrer">
+          CHAT ON WHATSAPP
+        </a>
+        <a href="#" class="contact-btn email-btn">
+          SEND EMAIL
+        </a>
+      </div>
+
+      <p class="contact-alt-text">OR JUST SAY HI!</p>
+    </div>
+  </section>
+
+  <footer class="mobile-footer">
+    <div class="footer-card">
+      <div class="retro-window-bar">
+        <span class="window-dot"></span>
+        <span class="window-dot"></span>
+        <span class="window-dot"></span>
+        <span class="window-close-x">OX</span>
+      </div>
+      <div class="footer-card-body">
+        <h2 class="footer-heading">THANKS FOR VISITING!</h2>
+      </div>
+    </div>
+
+    <div class="footer-socials">
+      <a href="#" class="social-icon" aria-label="Instagram">Instagram</a>
+      <a href="#" class="social-icon" aria-label="TikTok">TikTok</a>
+      <a href="#" class="social-icon" aria-label="YouTube">YouTube</a>
+      <a href="mailto:donnystr23@gmail.com" class="social-icon" aria-label="Email">Email</a>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2026 All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="mobile.js"></script>
+</body>
+</html>
