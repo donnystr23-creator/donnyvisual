@@ -20,7 +20,7 @@
   
   <header class="mobile-header">
     <div class="logo-container">
-      <span class="logo">PORTFOLIO</span>
+      <a href="#home" class="logo">PORTFOLIO</a>
     </div>
     <button type="button" id="hamburger-btn" class="hamburger-btn" aria-label="Open Menu">
       <span class="hamburger-line"></span>
@@ -31,13 +31,16 @@
 
   <section id="home" class="mobile-home">
     <div class="home-hero">
-      <p class="hero-intro">HI, I'M DONNY</p>
-      <h1 class="hero-title">CREATIVE DEVELOPER</h1>
-      <p class="hero-subtitle">TURNING IDEAS INTO REALITY.</p>
+      <p class="hero-intro">DONNY SATRIADI</p>
+      <h1 class="hero-title">
+        <span>PORTFOLIO</span><br>
+        <span>CREATIVE</span>
+      </h1>
+      <p class="hero-subtitle">CREATE. EXPLORE. VISUALIZE.</p>
       <div class="hero-buttons">
-        <a href="#work" class="btn btn-work">WORK</a>
-        <a href="#about" class="btn btn-about">ABOUT ME</a>
-        <a href="#contact" class="btn btn-contact">CONTACT</a>
+        <a href="#work" class="btn btn-work">DESIGN GRAFIS</a>
+        <a href="#work" class="btn btn-about">PHOTOGRAPHY</a>
+        <a href="#work" class="btn btn-contact">MOTION GRAPHICS</a>
       </div>
     </div>
 
@@ -72,7 +75,8 @@
 
   <section id="work" class="mobile-work">
     <div class="work-header">
-      <h2 class="section-title">SELECTED WORK</h2>
+      <h2 class="section-title">EXPLORE MY WORK</h2>
+      <p class="work-subtitle" style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 12px;">SELECTED WORK / 2026</p>
       <ul class="work-categories">
         <li class="category-item active" data-category="design">DESIGN GRAFIS</li>
         <li class="category-item" data-category="photography">PHOTOGRAPHY</li>
@@ -81,7 +85,6 @@
     </div>
 
     <div class="carousel-container" id="work-carousel">
-      <div class="carousel-track" id="carousel-track">
       <div class="carousel-track" id="carousel-track">
       </div>
 
@@ -92,15 +95,14 @@
 
   <section id="about" class="mobile-about">
     <div class="about-content">
-      <h2 class="section-title">ABOUT ME</h2>
+      <span class="section-label">ABOUT ME</span>
+      <p class="about-subtitle" style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 8px;">CREATIVE JOURNEY // 2026</p>
+      <h2 class="section-title">HEY, I'M<br>DONNY.</h2>
       
       <div class="about-bio-container">
         <div class="about-text-box">
           <p class="about-desc">
-            I'm a creative person who loves graphic design, photography, and motion graphics.
-          </p>
-          <p class="about-desc">
-            I enjoy turning ideas into visual and digital experiences.
+            I’m a creative person with a passion for Graphic design, photography, and motion graphics. I enjoy turning ideas into visual and always explore new things to grow my skill.
           </p>
         </div>
 
@@ -115,32 +117,44 @@
       </div>
 
       <div class="skills-wrapper">
-        <h3 class="skills-title">SKILLS</h3>
-        <ul class="skills-list" id="skills-list"></ul>
+        <ul class="skills-list" id="skills-list">
+          <li class="skill-pill">GRAPHIC DESIGN</li>
+          <li class="skill-pill">PHOTOGRAPHY</li>
+          <li class="skill-pill">MOTION GRAPHICS</li>
+        </ul>
+      </div>
+
+      <div class="about-extras" style="margin-top: 20px; display: flex; flex-direction: column; gap: 8px;">
+        <div class="location-pill" style="font-size: 0.85rem;">
+          <span class="location-text">BASED IN INDONESIA</span>
+        </div>
+        <div class="tagline-pill" style="font-size: 0.85rem;">
+          <span class="tagline-text">GOOD IDEAS MAKE A BETTER TOMORROW</span>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="contact" class="mobile-contact">
     <div class="contact-content">
-      <h2 class="section-title">LET'S WORK TOGETHER</h2>
-      <p class="contact-desc">Feel free to reach out for collaborations or project inquiries.</p>
+      <span class="section-label">CONTACT</span>
+      <p class="contact-subtitle" style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 8px;">AVAILABLE FOR FREELANCE</p>
+      <h2 class="section-title">LET'S WORK<br>TOGETHER.</h2>
+      <p class="contact-desc">Have a project in mind?<br>Let's create something great.</p>
 
       <form class="contact-form" action="#" method="post">
         <label for="contact-message" class="visually-hidden">Message</label>
-        <textarea id="contact-message" name="message" class="contact-textarea" placeholder="Write your message here..."></textarea>
+        <textarea id="contact-message" name="message" class="contact-textarea" placeholder="Tell me about your project..."></textarea>
       </form>
 
       <div class="contact-actions">
-        <a href="#" class="contact-btn whatsapp-btn" target="_blank" rel="noopener noreferrer">
-          CHAT ON WHATSAPP
+        <a href="#" id="waButton" class="contact-btn whatsapp-btn" target="_blank" rel="noopener noreferrer">
+          WHATSAPP
         </a>
-        <a href="#" class="contact-btn email-btn">
-          SEND EMAIL
+        <a href="#" id="emailButton" class="contact-btn email-btn">
+          EMAIL
         </a>
       </div>
-
-      <p class="contact-alt-text">OR JUST SAY HI!</p>
     </div>
   </section>
 
