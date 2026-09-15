@@ -1,10 +1,4 @@
 const mySkills = [
-  "GRAPHIC DESIGN",
-  "PHOTOGRAPHY",
-  "MOTION GRAPHICS",
-  "VIDEO EDITING",
-  "UI/UX DESIGN",
-  "CREATIVE CODING"
 ];
 
 function renderSkills() {
