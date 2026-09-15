@@ -2,187 +2,166 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donny Satriadi - Portfolio</title>
-  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="pc.css">
 </head>
-<body class="mobile-layout">
-  <div class="loader-screen">
-    <div class="loader-container">
-      <p class="loader-title">LOADING SYSTEM...</p>
-      <div class="loader-bar-wrapper">
-        <div class="loader-bar-fill"></div>
-      </div>
-    </div>
-  </div>
+<body class="desktop-layout">
 
   <div class="bg-grid-pattern" aria-hidden="true"></div>
-  
-  <header class="mobile-header">
-    <div class="logo-container">
-      <a href="#home" class="logo">PORTFOLIO</a>
-    </div>
-    <button type="button" id="hamburger-btn" class="hamburger-btn" aria-label="Open Menu">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
-  </header>
 
-  <section id="home" class="mobile-home">
-    <div class="home-hero">
-      <p class="hero-intro">DONNY SATRIADI</p>
-      <h1 class="hero-title">
-        <span>PORTFOLIO</span><br>
-        <span>CREATIVE</span>
-      </h1>
-      <p class="hero-subtitle">CREATE. EXPLORE. VISUALIZE.</p>
-      <div class="hero-buttons">
-        <a href="#work" class="btn btn-work">DESIGN GRAFIS</a>
-        <a href="#work" class="btn btn-about">PHOTOGRAPHY</a>
-        <a href="#work" class="btn btn-contact">MOTION GRAPHICS</a>
-      </div>
+  <header class="navbar">
+    <div class="nav-brand">
+      <a href="#hero" class="brand-logo">PORTFOLIO</a>
     </div>
-
-    <div class="character-area">
-      <img src="images/hero-profil.png" alt="Creative Character Illustration" class="character-img">
-    </div>
-  </section>
-
-  <div id="mobile-menu" class="mobile-menu-overlay">
-    <div class="menu-header">
-      <div class="logo-container">
-        <span class="logo">PORTFOLIO</span>
-      </div>
-      <button type="button" id="menu-close-btn" class="close-btn" aria-label="Close Menu">&times;</button>
-    </div>
-
-    <nav class="mobile-nav">
-      <ul class="nav-links">
-        <li><a href="#work" class="nav-link">WORK</a></li>
-        <li><a href="#about" class="nav-link">ABOUT ME</a></li>
-        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+    <nav class="nav-menu">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#work" class="nav-link">WORK</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">ABOUT ME</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
       </ul>
     </nav>
+  </header>
 
-    <div class="menu-socials">
-      <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
-      <a href="#" class="social-link" aria-label="TikTok">TikTok</a>
-      <a href="#" class="social-link" aria-label="YouTube">YouTube</a>
-      <a href="mailto:donnystr23@gmail.com" class="social-link" aria-label="Email">Email</a>
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <p class="hero-name">DONNY SATRIADI</p>
+      <h1 class="hero-title">
+        <span>PORTFOLIO</span>
+        <span>CREATIVE</span>
+      </h1>
+      <p class="hero-tagline">CREATE. EXPLORE. VISUALIZE.</p>
+      <div class="hero-categories">
+        <a href="#work" class="category-pill">DESIGN GRAFIS</a>
+        <a href="#work" class="category-pill">PHOTOGRAPHY</a>
+        <a href="#work" class="category-pill">MOTION GRAPHICS</a>
+      </div>
     </div>
-  </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <img src="images/about-me.png" alt="Donny Satriadi Profile" class="hero-profile-img">
+      </div>
+    </div>
+  </section>
 
-  <section id="work" class="mobile-work">
+  <section id="work" class="work">
     <div class="work-header">
-      <h2 class="section-title">EXPLORE MY WORK</h2>
-      <p class="work-subtitle" style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 12px;">SELECTED WORK / 2026</p>
-      <ul class="work-categories">
-        <li class="category-item active" data-category="design">DESIGN GRAFIS</li>
-        <li class="category-item" data-category="photography">PHOTOGRAPHY</li>
-        <li class="category-item" data-category="motion">MOTION GRAPHIC</li>
-      </ul>
+      <h2 class="work-title">EXPLORE MY WORK</h2>
+      <p class="work-subtitle">SELECTED WORK / 2026</p>
+      <div class="work-filter-bar">
+        <button type="button" class="filter-btn active" data-category="design">DESIGN GRAFIS</button>
+        <button type="button" class="filter-btn" data-category="photography">PHOTOGRAPHY</button>
+        <button type="button" class="filter-btn" data-category="motion">MOTION GRAPHIC</button>
+      </div>
     </div>
 
-    <div class="carousel-container" id="work-carousel">
-      <div class="carousel-track" id="carousel-track">
+        <div class="work-gallery">
+      <!-- FEATURED PROJECT -->
+      <article class="project-item featured-project" data-category="design">
+        <div class="project-media">
+          <img src="images/design-01.png" alt="Best Design Project Preview" class="project-img">
+          <h3 class="project-title">BEST DESIGN</h3>
+        </div>
+        <div class="project-info">
+          <span class="project-number">01</span>
+          <span class="project-category">GRAPHIC DESIGN</span>
+          <p class="project-desc">A COLLECTION OF MY BEST CREATIVE WORKS</p>
+        </div>
+      </article>
+
+      <article class="project-item" data-category="design">
+        <div class="project-media">
+          <img src="images/design-02.png" alt="Poster Design Project Preview" class="project-img">
+        </div>
+        <div class="project-info">
+          <span class="project-number">02</span>
+          <h3 class="project-title">POSTER</h3>
+        </div>
+      </article>
+
+      <article class="project-item" data-category="design">
+        <div class="project-media">
+          <img src="images/design-03.png" alt="Drawing Project Preview" class="project-img">
+        </div>
+        <div class="project-info">
+          <span class="project-number">03</span>
+          <h3 class="project-title">DRAWING</h3>
+        </div>
+      </article>
+
+      <article class="project-item" data-category="design">
+        <div class="project-media">
+          <img src="images/design-04.png" alt="Social Media Design Preview" class="project-img">
+        </div>
+        <div class="project-info">
+          <span class="project-number">04</span>
+          <h3 class="project-title">SOCIAL MEDIA</h3>
+        </div>
+      </article>
+    </div>
+
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-container">
+      <div class="about-card-main">
+        <span class="section-label">ABOUT ME</span>
+        <p class="about-subtitle">CREATIVE JOURNEY // 2026</p>
+        <h2 class="about-heading">
+          HEY, I'M<br>DONNY.
+        </h2>
+        <p class="about-desc">
+          I’m a creative person with a passion for Graphic design, photography, and motion graphics. I enjoy turning ideas into visual and always explore new things to grow my skill.
+        </p>
+        <div class="skills-list">
+          <span class="skill-pill">GRAPHIC DESIGN</span>
+          <span class="skill-pill">PHOTOGRAPHY</span>
+          <span class="skill-pill">MOTION GRAPHICS</span>
+        </div>
       </div>
 
-      <div class="carousel-indicators" id="carousel-indicators">
+      <div class="about-character-card">
+        <img src="images/hero-profil.png" alt="Creative Character Artwork" class="about-character-img">
+      </div>
+    </div>
+
+    <div class="about-extras">
+      <div class="location-pill">
+        <img src="images/world.png" alt="World Location Icon" class="location-icon">
+        <span class="location-text">BASED IN INDONESIA</span>
+      </div>
+      <div class="tagline-pill">
+        <span class="tagline-text">GOOD IDEAS MAKE A BETTER TOMORROW</span>
       </div>
     </div>
   </section>
 
-  <section id="about" class="mobile-about">
-    <div class="about-content">
-      <span class="section-label">ABOUT ME</span>
-      <p class="about-subtitle" style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 8px;">CREATIVE JOURNEY // 2026</p>
-      <h2 class="section-title">HEY, I'M<br>DONNY.</h2>
-      
-      <div class="about-bio-container">
-        <div class="about-text-box">
-          <p class="about-desc">
-            I’m a creative person with a passion for Graphic design, photography, and motion graphics. I enjoy turning ideas into visual and always explore new things to grow my skill.
-          </p>
-        </div>
-
-        <div class="about-avatar-wrapper">
-          <div class="retro-window-header">
-            <span class="window-dot"></span>
-            <span class="window-dot1"></span>
-            <span class="window-dot2"></span>
-          </div>
-          <img src="images/about-me.png" alt="Profile Picture" class="profile-img">
-        </div>
-      </div>
-
-      <div class="skills-wrapper">
-        <ul class="skills-list" id="skills-list">
-          <li class="skill-pill">GRAPHIC DESIGN</li>
-          <li class="skill-pill">PHOTOGRAPHY</li>
-          <li class="skill-pill">MOTION GRAPHICS</li>
-        </ul>
-      </div>
-
-      <div class="about-extras" style="margin-top: 20px; display: flex; flex-direction: column; gap: 8px;">
-        <div class="location-pill" style="font-size: 0.85rem;">
-          <span class="location-text">BASED IN INDONESIA</span>
-        </div>
-        <div class="tagline-pill" style="font-size: 0.85rem;">
-          <span class="tagline-text">GOOD IDEAS MAKE A BETTER TOMORROW</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="mobile-contact">
-    <div class="contact-content">
+  <section id="contact" class="contact">
+    <div class="contact-card-main">
       <span class="section-label">CONTACT</span>
-      <p class="contact-subtitle" style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 8px;">AVAILABLE FOR FREELANCE</p>
-      <h2 class="section-title">LET'S WORK<br>TOGETHER.</h2>
-      <p class="contact-desc">Have a project in mind?<br>Let's create something great.</p>
+      <p class="contact-subtitle">AVAILABLE FOR FREELANCE</p>
+      <h2 class="contact-heading">
+        LET'S WORK<br>TOGETHER.
+      </h2>
+      <p class="contact-desc">
+        Have a project in mind?<br>Let's create something great.
+      </p>
 
       <form class="contact-form" action="#" method="post">
-        <label for="contact-message" class="visually-hidden">Message</label>
-        <textarea id="contact-message" name="message" class="contact-textarea" placeholder="Tell me about your project..."></textarea>
+        <label for="message" class="visually-hidden">Message</label>
+        <textarea id="message" name="message" class="contact-textarea" placeholder="Tell me about your project..."></textarea>
+        
+        <div class="contact-actions">
+          <a href="#" id="waButton" class="action-btn wa-btn">WHATSAPP</a>
+          <a href="#" id="emailButton" class="action-btn email-btn">EMAIL</a>
+        </div>
       </form>
+    </div>
 
-      <div class="contact-actions">
-        <a href="#" id="waButton" class="contact-btn whatsapp-btn" target="_blank" rel="noopener noreferrer">
-          WHATSAPP
-        </a>
-        <a href="#" id="emailButton" class="contact-btn email-btn">
-          EMAIL
-        </a>
-      </div>
+    <div class="contact-character-card">
+      <img src="images/about.png" alt="Character Illustration Contact" class="contact-character-img">
     </div>
   </section>
 
-  <footer class="mobile-footer">
-    <div class="footer-card">
-      <div class="retro-window-bar">
-        <span class="window-dot"></span>
-        <span class="window-dot"></span>
-        <span class="window-dot"></span>
-        <span class="window-close-x">OX</span>
-      </div>
-      <div class="footer-card-body">
-        <h2 class="footer-heading">THANKS FOR VISITING!</h2>
-      </div>
-    </div>
-
-    <div class="footer-socials">
-      <a href="#" class="social-icon" aria-label="Instagram">Instagram</a>
-      <a href="#" class="social-icon" aria-label="TikTok">TikTok</a>
-      <a href="#" class="social-icon" aria-label="YouTube">YouTube</a>
-      <a href="mailto:donnystr23@gmail.com" class="social-icon" aria-label="Email">Email</a>
-    </div>
-
-    <div class="footer-bottom">
-      <p class="copyright">&copy; 2026 All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="mobile.js"></script>
+  <script src="pc.js"></script>
 </body>
 </html>
