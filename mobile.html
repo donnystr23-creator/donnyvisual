@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donny Satriadi - Portfolio</title>
   <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="animations.css">
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body class="mobile-layout">
@@ -42,6 +43,7 @@
         <a href="#work" class="btn btn-work">DESIGN GRAFIS</a>
         <a href="#work" class="btn btn-about">PHOTOGRAPHY</a>
         <a href="#work" class="btn btn-contact">MOTION GRAPHICS</a>
+        <a href="#work" class="btn btn-social">SOCIAL MEDIA DESIGN</a>
       </div>
     </div>
 
@@ -74,14 +76,33 @@
     </div>
   </div>
 
+  <!-- KINETIC INFINITE MARQUEE -->
+  <div class="marquee-container" aria-hidden="true" style="margin: 20px 0 28px;">
+    <div class="marquee-track">
+      <div class="marquee-item" style="font-size: 12px; padding: 8px 16px;"><span>DONNY SATRIADI</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item" style="font-size: 12px; padding: 8px 16px;"><span>GRAPHIC DESIGNER</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item" style="font-size: 12px; padding: 8px 16px;"><span>SOCIAL MEDIA DESIGN</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item" style="font-size: 12px; padding: 8px 16px;"><span>PHOTOGRAPHY</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item" style="font-size: 12px; padding: 8px 16px;"><span>MOTION GRAPHICS</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item" style="font-size: 12px; padding: 8px 16px;"><span>SELECTED WORKS 2026</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item" style="font-size: 12px; padding: 8px 16px;"><span>DONNY SATRIADI</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item" style="font-size: 12px; padding: 8px 16px;"><span>GRAPHIC DESIGNER</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item" style="font-size: 12px; padding: 8px 16px;"><span>SOCIAL MEDIA DESIGN</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item" style="font-size: 12px; padding: 8px 16px;"><span>PHOTOGRAPHY</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item" style="font-size: 12px; padding: 8px 16px;"><span>MOTION GRAPHICS</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item" style="font-size: 12px; padding: 8px 16px;"><span>SELECTED WORKS 2026</span><span class="marquee-star">✦</span></div>
+    </div>
+  </div>
+
   <section id="work" class="mobile-work">
     <div class="work-header">
       <h2 class="section-title">EXPLORE MY WORK</h2>
       <p class="work-subtitle" style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 12px;">SELECTED WORK / 2026</p>
       <ul class="work-categories">
-        <li class="category-item active" data-category="design">DESIGN GRAFIS</li>
+        <li class="category-item active" data-category="all">ALL WORK</li>
+        <li class="category-item" data-category="design">GRAPHIC DESIGN</li>
         <li class="category-item" data-category="photography">PHOTOGRAPHY</li>
-        <li class="category-item" data-category="motion">MOTION GRAPHIC</li>
+        <li class="category-item" data-category="motion">MOTION GRAPHICS</li>
       </ul>
     </div>
 
@@ -122,6 +143,7 @@
           <li class="skill-pill">GRAPHIC DESIGN</li>
           <li class="skill-pill">PHOTOGRAPHY</li>
           <li class="skill-pill">MOTION GRAPHICS</li>
+          <li class="skill-pill">SOCIAL MEDIA DESIGN</li>
         </ul>
       </div>
 
@@ -184,6 +206,39 @@
     </div>
   </footer>
 
+  <!-- PROJECT DETAIL MODAL -->
+  <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="project-modal-backdrop" id="modalBackdrop"></div>
+    <div class="project-modal-dialog">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close Project Details">&times;</button>
+      <div class="modal-slideshow-container" id="modalSlideshowContainer">
+        <button type="button" class="modal-slide-nav modal-slide-prev" id="modalPrevBtn" aria-label="Previous Slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="modal-media-wrap" id="modalMediaWrap">
+          <img src="" alt="" class="modal-media-img" id="modalMediaImg">
+        </div>
+        <button type="button" class="modal-slide-nav modal-slide-next" id="modalNextBtn" aria-label="Next Slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <div class="modal-slide-indicator" id="modalSlideIndicator">01 / 01</div>
+      </div>
+      <div class="modal-details">
+        <div class="modal-header-meta">
+          <span class="modal-number" id="modalNumber">01</span>
+          <span class="modal-category" id="modalCategory">GRAPHIC DESIGN</span>
+          <span class="modal-subcategory" id="modalSubcategory" style="display: none;">SOCIAL MEDIA DESIGN</span>
+          <span class="modal-year" id="modalYear">2026</span>
+        </div>
+        <h3 class="modal-title" id="modalTitle">ONYXIER CAMPAIGN</h3>
+        <p class="modal-subtitle" id="modalSubtitle">SPRING/SUMMER 2026 COLLECTION</p>
+        <p class="modal-description" id="modalDesc"></p>
+        <div class="modal-tags" id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
   <script src="mobile.js"></script>
+  <script src="animations.js"></script>
 </body>
 </html>

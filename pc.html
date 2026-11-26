@@ -4,11 +4,46 @@
   <meta charset="UTF-8">
   <title>Donny Satriadi - Portfolio</title>
   <link rel="stylesheet" href="pc.css">
+  <link rel="stylesheet" href="animations.css">
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body class="desktop-layout">
 
   <div class="bg-grid-pattern" aria-hidden="true"></div>
+
+  <!-- AESTHETIC HUD RULER SCROLL NAVIGATION RAIL -->
+  <aside class="hud-scroll-rail" id="hudScrollRail" aria-label="Scroll Ruler Navigation">
+    <div class="hud-rail-bg" aria-hidden="true"></div>
+    
+    <!-- Active Needle Indicator -->
+    <div class="hud-scroll-needle" id="hudScrollNeedle">
+      <span class="hud-needle-badge" id="hudNeedleBadge">0%</span>
+      <span class="hud-needle-line"></span>
+    </div>
+
+    <!-- Section Markers with Leader Lines -->
+    <nav class="hud-rail-sections" id="hudRailSections">
+      <a href="#hero" class="hud-section-link active" data-target="hero">
+        <span class="hud-section-label">HERO</span>
+        <span class="hud-leader-line"></span>
+      </a>
+      <a href="#work" class="hud-section-link" data-target="work">
+        <span class="hud-section-label">EXPLORE WORK</span>
+        <span class="hud-leader-line"></span>
+      </a>
+      <a href="#about" class="hud-section-link" data-target="about">
+        <span class="hud-section-label">ABOUT ME</span>
+        <span class="hud-leader-line"></span>
+      </a>
+      <a href="#contact" class="hud-section-link" data-target="contact">
+        <span class="hud-section-label">CONTACT</span>
+        <span class="hud-leader-line"></span>
+      </a>
+    </nav>
+
+    <!-- Ruler Scale Ticks (0 to 100) -->
+    <div class="hud-ruler-scale" id="hudRulerScale" aria-hidden="true"></div>
+  </aside>
 
   <header class="navbar">
     <div class="nav-brand">
@@ -35,6 +70,7 @@
         <a href="#work" class="category-pill">DESIGN GRAFIS</a>
         <a href="#work" class="category-pill">PHOTOGRAPHY</a>
         <a href="#work" class="category-pill">MOTION GRAPHICS</a>
+        <a href="#work" class="category-pill">SOCIAL MEDIA DESIGN</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -44,62 +80,84 @@
     </div>
   </section>
 
-  <section id="work" class="work">
-    <div class="work-header">
-      <h2 class="work-title">EXPLORE MY WORK</h2>
-      <p class="work-subtitle">SELECTED WORK / 2026</p>
-      <div class="work-filter-bar">
-        <button type="button" class="filter-btn active" data-category="design">DESIGN GRAFIS</button>
-        <button type="button" class="filter-btn" data-category="photography">PHOTOGRAPHY</button>
-        <button type="button" class="filter-btn" data-category="motion">MOTION GRAPHIC</button>
+  <!-- KINETIC INFINITE MARQUEE -->
+  <div class="marquee-container" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-item"><span>DONNY SATRIADI</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item"><span>GRAPHIC DESIGNER</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item"><span>SOCIAL MEDIA DESIGN</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item"><span>PHOTOGRAPHY</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item"><span>MOTION GRAPHICS</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item"><span>SELECTED WORKS 2026</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item"><span>AVAILABLE FOR FREELANCE</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item"><span>DONNY SATRIADI</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item"><span>GRAPHIC DESIGNER</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item"><span>SOCIAL MEDIA DESIGN</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item"><span>PHOTOGRAPHY</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item"><span>MOTION GRAPHICS</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item"><span>SELECTED WORKS 2026</span><span class="marquee-star">✦</span></div>
+      <div class="marquee-item"><span>AVAILABLE FOR FREELANCE</span><span class="marquee-star">✦</span></div>
+    </div>
+  </div>
+
+  <section id="work" class="work selected-work-section">
+    <!-- Header -->
+    <div class="work-header-top">
+      <div class="work-title-wrap">
+        <span class="work-crosshair" aria-hidden="true">+</span>
+        <h2 class="work-title">SELECTED WORK</h2>
+      </div>
+      <div class="work-header-meta">
+        <p class="work-subtitle" id="workSubtitle">CREATIVE PORTFOLIO / 2026 (17 PROJECTS)</p>
+        <div class="work-header-accents" aria-hidden="true">
+          <span class="work-sparkle">✦</span>
+          <svg class="wireframe-globe" width="68" height="38" style="width: 68px; height: 38px; min-width: 68px; max-width: 68px; flex-shrink: 0;" viewBox="0 0 100 60" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2">
+            <ellipse cx="50" cy="30" rx="46" ry="26" />
+            <ellipse cx="50" cy="30" rx="30" ry="26" />
+            <ellipse cx="50" cy="30" rx="14" ry="26" />
+            <line x1="4" y1="30" x2="96" y2="30" />
+            <line x1="12" y1="18" x2="88" y2="18" stroke-dasharray="2 2" />
+            <line x1="12" y1="42" x2="88" y2="42" stroke-dasharray="2 2" />
+          </svg>
+        </div>
       </div>
     </div>
 
-        <div class="work-gallery">
-      <!-- FEATURED PROJECT -->
-      <article class="project-item featured-project" data-category="design">
-        <div class="project-media">
-          <img src="images/design-01.png" alt="Best Design Project Preview" class="project-img">
-          <h3 class="project-title">BEST DESIGN</h3>
-        </div>
-        <div class="project-info">
-          <span class="project-number">01</span>
-          <span class="project-category">GRAPHIC DESIGN</span>
-          <p class="project-desc">A COLLECTION OF MY BEST CREATIVE WORKS</p>
-        </div>
-      </article>
-
-      <article class="project-item" data-category="design">
-        <div class="project-media">
-          <img src="images/design-02.png" alt="Poster Design Project Preview" class="project-img">
-        </div>
-        <div class="project-info">
-          <span class="project-number">02</span>
-          <h3 class="project-title">POSTER</h3>
-        </div>
-      </article>
-
-      <article class="project-item" data-category="design">
-        <div class="project-media">
-          <img src="images/design-03.png" alt="Drawing Project Preview" class="project-img">
-        </div>
-        <div class="project-info">
-          <span class="project-number">03</span>
-          <h3 class="project-title">DRAWING</h3>
-        </div>
-      </article>
-
-      <article class="project-item" data-category="design">
-        <div class="project-media">
-          <img src="images/design-04.png" alt="Social Media Design Preview" class="project-img">
-        </div>
-        <div class="project-info">
-          <span class="project-number">04</span>
-          <h3 class="project-title">SOCIAL MEDIA</h3>
-        </div>
-      </article>
+    <!-- Category Filter Bar -->
+    <div class="work-filter-bar" role="tablist" aria-label="Project Categories">
+      <button type="button" class="filter-pill active" data-category="all" role="tab" aria-selected="true">
+        <span>ALL WORK</span>
+      </button>
+      <button type="button" class="filter-pill" data-category="design" role="tab" aria-selected="false">
+        <span>GRAPHIC DESIGN</span>
+      </button>
+      <button type="button" class="filter-pill" data-category="photography" role="tab" aria-selected="false">
+        <span>PHOTOGRAPHY</span>
+      </button>
+      <button type="button" class="filter-pill" data-category="motion" role="tab" aria-selected="false">
+        <span>MOTION GRAPHICS</span>
+      </button>
     </div>
 
+    <!-- Asymmetric Editorial Grid (Dynamically Populated by pc.js, with semantic fallback markup) -->
+    <div class="selected-work-grid" id="selectedWorkGrid">
+      <!-- Cards will be rendered and managed by pc.js from projectData -->
+    </div>
+
+    <!-- Section Footer Accent -->
+    <div class="work-footer-accent" aria-hidden="true">
+      <div class="hazard-chevrons">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="scroll-prompt">
+        <span class="scroll-line"></span>
+        <span class="scroll-text">SCROLL FOR MORE WORK ∨</span>
+        <span class="scroll-line"></span>
+      </div>
+      <div class="hazard-chevrons">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
   </section>
 
   <section id="about" class="about">
@@ -117,6 +175,7 @@
           <span class="skill-pill">GRAPHIC DESIGN</span>
           <span class="skill-pill">PHOTOGRAPHY</span>
           <span class="skill-pill">MOTION GRAPHICS</span>
+          <span class="skill-pill">SOCIAL MEDIA DESIGN</span>
         </div>
       </div>
 
@@ -163,6 +222,39 @@
     </div>
   </section>
 
+  <!-- PROJECT DETAIL MODAL -->
+  <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="project-modal-backdrop" id="modalBackdrop"></div>
+    <div class="project-modal-dialog">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close Project Details">&times;</button>
+      <div class="modal-slideshow-container" id="modalSlideshowContainer">
+        <button type="button" class="modal-slide-nav modal-slide-prev" id="modalPrevBtn" aria-label="Previous Slide">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="modal-media-wrap" id="modalMediaWrap">
+          <img src="" alt="" class="modal-media-img" id="modalMediaImg">
+        </div>
+        <button type="button" class="modal-slide-nav modal-slide-next" id="modalNextBtn" aria-label="Next Slide">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <div class="modal-slide-indicator" id="modalSlideIndicator">01 / 01</div>
+      </div>
+      <div class="modal-details">
+        <div class="modal-header-meta">
+          <span class="modal-number" id="modalNumber">01</span>
+          <span class="modal-category" id="modalCategory">GRAPHIC DESIGN</span>
+          <span class="modal-subcategory" id="modalSubcategory" style="display: none;">SOCIAL MEDIA DESIGN</span>
+          <span class="modal-year" id="modalYear">2026</span>
+        </div>
+        <h3 class="modal-title" id="modalTitle">ONYXIER CAMPAIGN</h3>
+        <p class="modal-subtitle" id="modalSubtitle">SPRING/SUMMER 2026 COLLECTION</p>
+        <p class="modal-description" id="modalDesc"></p>
+        <div class="modal-tags" id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
   <script src="pc.js"></script>
+  <script src="animations.js"></script>
 </body>
 </html>

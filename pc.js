@@ -71,189 +71,676 @@ window.addEventListener("load", () => {
 });
 
 // ==========================================
-// DATA PROJECTS (DESIGN, PHOTOGRAPHY, MOTION)
+// SELECTED WORK — PORTFOLIO DATA & ASSETS
 // ==========================================
-// Tips Motion: Kamu bisa gunakan file video .mp4 atau gambar .png
-const projectData = {
-  design: {
-    featured: {
-      image: "images/design-01.png",
-      number: "01",
-      category: "GRAPHIC DESIGN",
-      title: "BEST DESIGN",
-      description: "A COLLECTION OF MY BEST CREATIVE WORKS"
-    },
-    items: [
-      { image: "images/design-02.png", number: "02", title: "POSTER" },
-      { image: "images/design-03.png", number: "03", title: "DRAWING" },
-      { image: "images/design-04.png", number: "04", title: "SOCIAL MEDIA" }
-    ]
+const portfolioProjects = [
+  {
+    id: "proj-01",
+    num: "01",
+    title: "ONYXIER CAMPAIGN",
+    categoryKey: "photography",
+    categoryLabel: "PHOTOGRAPHY",
+    subtitle: "SPRING/SUMMER 2026 COLLECTION",
+    year: "2026",
+    image: "images/photo-03.png",
+    images: ["images/photo-03.png"],
+    description: "High-fashion editorial campaign exploring contemporary streetwear silhouettes, dark leather aesthetics, and futuristic accessories for Onyxier.",
+    tags: ["Fashion Direction", "Styling", "Creative Direction", "Editorial"],
+    featured: true
   },
-  photography: {
-    featured: {
-      image: "images/photo-01.png",
-      number: "02",
-      category: "PHOTOGRAPHY",
-      title: "BEST PHOTOGRAPHY",
-      description: "EXPLORING SHADOWS AND LIGHT IN THE CITY"
-    },
-    items: [
-      { image: "images/photo-02.png", number: "02", title: "STREET PHOTOGRAPHY" },
-      { image: "images/photo-03.png", number: "03", title: "EDTIORIAL PHOTOGRAPHY" },
-      { image: "images/photo-04.png", number: "04", title: "CAR PHOTOGRAPHY" }
-    ]
+  {
+    id: "proj-02",
+    num: "02",
+    title: "ONYXIER BRAND IDENTITY",
+    categoryKey: "design",
+    categoryLabel: "GRAPHIC DESIGN",
+    subtitle: "BRAND IDENTITY & PACKAGING",
+    year: "2026",
+    image: "images/design-01.png",
+    images: ["images/design-01.png"],
+    description: "Complete visual identity and luxury packaging design system for Onyxier, combining bespoke minimalist typography with tactile dark finishes.",
+    tags: ["Visual Identity", "Typography", "Packaging", "Print"],
+    featured: false
   },
-  motion: {
-    featured: {
-      image: "images/motion-01.gif", // Otomatis render video looping
-      number: "03",
-      category: "MOTION GRAPHIC",
-      title: "Ads motion",
-      description: "DYNAMIC ANIMATION AND AUDIO-VISUAL EXPLORATION"
-    },
-    items: [
-      { image: "images/motion-02.gif", number: "02", title: "LOGO REVEAL" },
-      { image: "images/motion-03.gif", number: "03", title: "3D RENDER" },
-      { image: "images/motion-04.gif", number: "04", title: "ADS MOTION #2" }
-    ]
+  {
+    id: "proj-03",
+    num: "03",
+    title: "NEON RUSH POSTER SERIES",
+    categoryKey: "design",
+    categoryLabel: "GRAPHIC DESIGN",
+    subtitle: "TYPOGRAPHY POSTER SERIES VOL. 01",
+    year: "2026",
+    image: "images/design-02.png",
+    images: ["images/design-02.png"],
+    topMeta: "TYPOGRAPHY<br>POSTER SERIES<br>VOL. 01",
+    description: "Experimental typography poster series exploring liquid chrome 3D letterforms, distortion shaders, and Swiss-style technical grids.",
+    tags: ["Poster Art", "Liquid Chrome", "Typography", "Experimental"],
+    featured: false
+  },
+  {
+    id: "proj-04",
+    num: "04",
+    title: "NEON BEVERAGE CAMPAIGN",
+    categoryKey: "photography",
+    categoryLabel: "PHOTOGRAPHY",
+    subtitle: "PRODUCT COMMERCIAL AD",
+    year: "2026",
+    image: "images/photo-01.png",
+    images: ["images/photo-01.png"],
+    description: "Vibrant commercial beverage advertising photography with high-speed splash capture, condensation textures, and neon lighting accents.",
+    tags: ["Commercial", "Product Photography", "Lighting", "Art Direction"],
+    featured: false
+  },
+  {
+    id: "proj-05",
+    num: "05",
+    title: "URBAN ARCHIVE LOOKBOOK",
+    categoryKey: "photography",
+    categoryLabel: "PHOTOGRAPHY",
+    subtitle: "STREETWEAR LOOKBOOK // 2026",
+    year: "2026",
+    image: "images/photo-02.png",
+    images: ["images/photo-02.png"],
+    description: "Location lookbook photoshoot shot in brutalist urban settings, highlighting textured outerwear, candid movement, and street youth culture.",
+    tags: ["Lookbook", "Streetwear", "Urban Photography", "Direction"],
+    featured: false
+  },
+  {
+    id: "proj-06",
+    num: "06",
+    title: "ABSTRACT MOTION EXPLORATION",
+    categoryKey: "motion",
+    categoryLabel: "MOTION GRAPHICS",
+    subtitle: "3D KINETIC RENDERING",
+    year: "2026",
+    image: "images/motion-03.gif",
+    images: ["images/motion-03.gif"],
+    description: "Dynamic 3D kinetic motion loops investigating glass refraction, metallic fluid simulations, and continuous rhythmic motion cycles.",
+    tags: ["3D Animation", "Kinetic Loop", "Glass Shader", "CGI"],
+    featured: false
+  },
+  {
+    id: "proj-07",
+    num: "07",
+    title: "EDITORIAL MAGAZINE LAYOUT",
+    categoryKey: "design",
+    categoryLabel: "GRAPHIC DESIGN",
+    subtitle: "ISSUE Nº01 EDITORIAL",
+    year: "2026",
+    image: "images/design-04.png",
+    images: ["images/design-04.png"],
+    description: "Editorial print publication layout featuring modular typographic hierarchy, stark contrast spreads, and modern art direction.",
+    tags: ["Publication", "Editorial Layout", "Grid System", "Print"],
+    featured: false
+  },
+  {
+    id: "proj-08",
+    num: "08",
+    title: "CHARACTER ILLUSTRATION",
+    categoryKey: "design",
+    categoryLabel: "GRAPHIC DESIGN",
+    subtitle: "EXPERIMENTAL DOODLE ART",
+    year: "2026",
+    image: "images/design-03.png",
+    images: ["images/design-03.png"],
+    description: "Playful neo-pop character design and explosive doodle composition combining nostalgic cartoon motifs, vibrant hues, and intricate line work.",
+    tags: ["Illustration", "Character Design", "Pop Art", "Vector Art"],
+    featured: false
+  },
+  {
+    id: "proj-motion-01",
+    num: "09",
+    title: "COMMERCIAL ADS MOTION",
+    categoryKey: "motion",
+    categoryLabel: "MOTION GRAPHICS",
+    subtitle: "DYNAMIC AUDIO-VISUAL COMMERCIAL",
+    year: "2026",
+    image: "images/motion-01.gif",
+    images: ["images/motion-01.gif"],
+    description: "High-energy commercial advertisement motion graphics featuring rhythmic kinetic typography, vibrant brand color accents, and dynamic audio-visual pacing.",
+    tags: ["Motion Graphics", "Commercial Ad", "Kinetic Typography", "Visual Rhythm"],
+    featured: false
+  },
+  {
+    id: "proj-motion-02",
+    num: "10",
+    title: "KINETIC LOGO REVEAL",
+    categoryKey: "motion",
+    categoryLabel: "MOTION GRAPHICS",
+    subtitle: "BRAND IDENTITY ANIMATION",
+    year: "2026",
+    image: "images/motion-02.gif",
+    images: ["images/motion-02.gif"],
+    description: "Minimalist brand logo animation exploring precise geometric path transformations, morphing vector lines, and fluid visual reveals.",
+    tags: ["Motion Graphics", "Logo Animation", "Brand Identity", "Vector Animation"],
+    featured: false
+  },
+  {
+    id: "proj-motion-04",
+    num: "11",
+    title: "PRODUCT DYNAMICS MOTION",
+    categoryKey: "motion",
+    categoryLabel: "MOTION GRAPHICS",
+    subtitle: "3D FLUID & PRODUCT SIMULATION",
+    year: "2026",
+    image: "images/motion-04.gif",
+    images: ["images/motion-04.gif"],
+    description: "Looping commercial 3D motion study visualizing fluid dynamic splashes, zero-gravity product rotations, and glossy studio light reflections.",
+    tags: ["Motion Graphics", "3D Motion", "Fluid Dynamics", "Product Animation"],
+    featured: false
+  },
+  {
+    id: "proj-photo-04",
+    num: "12",
+    title: "AUTOMOTIVE ARCHIVE",
+    categoryKey: "photography",
+    categoryLabel: "PHOTOGRAPHY",
+    subtitle: "URBAN CAR PHOTOGRAPHY",
+    year: "2026",
+    image: "images/photo-04.png",
+    images: ["images/photo-04.png"],
+    description: "High-contrast urban automotive photography documenting modern off-road vehicles and classic luxury sedans in urban transit environments.",
+    tags: ["Photography", "Automotive", "Street Photography", "Car Culture"],
+    featured: false
+  },
+  {
+    id: "hot-cheesy-pizza",
+    num: "13",
+    title: "HOT & CHEESY PIZZA",
+    categoryKey: "design",
+    categoryLabel: "GRAPHIC DESIGN",
+    subcategory: "SOCIAL MEDIA DESIGN",
+    subtitle: "FOOD & BEVERAGE CAMPAIGN",
+    year: "2026",
+    image: "images/social-media/pizza-hot-cheesy.jpg",
+    images: [
+      "images/social-media/pizza-hot-cheesy.jpg",
+      "images/social-media/pizza-this-or-that.jpg"
+    ],
+    description: "Social media promotional feed design showcasing hot and cheesy pepperoni pizza with bold headline typography, molten cheese pull, and interactive 'This or That' audience engagement.",
+    tags: ["Social Media Design", "Promotional Post", "Food & Beverage", "Graphic Design"],
+    featured: false
+  },
+  {
+    id: "wardah-campaign",
+    num: "14",
+    title: "WARDAH CAMPAIGN",
+    categoryKey: "design",
+    categoryLabel: "GRAPHIC DESIGN",
+    subcategory: "SOCIAL MEDIA DESIGN",
+    subtitle: "VELVET LIP COLOR COLLECTION",
+    year: "2026",
+    image: "images/social-media/wardah-bold-color-01.jpg",
+    images: [
+      "images/social-media/wardah-bold-color-01.jpg",
+      "images/social-media/wardah-perfect-shade.jpg",
+      "images/social-media/wardah-bold-color-02.jpg"
+    ],
+    description: "High-impact social media campaign for Wardah Velvet Matte Lipstick, combining deep plum textures, luxury cosmetic accessories, and bold typographic hierarchy.",
+    tags: ["Social Media Design", "Beauty Campaign", "Cosmetics", "Graphic Design"],
+    featured: false
+  },
+  {
+    id: "sonicwave-festival",
+    num: "15",
+    title: "SONICWAVE FESTIVAL",
+    categoryKey: "design",
+    categoryLabel: "GRAPHIC DESIGN",
+    subcategory: "SOCIAL MEDIA DESIGN",
+    subtitle: "MUSIC EVENT DIGITAL FLYER",
+    year: "2026",
+    image: "images/social-media/sonic-wave-festival.jpg",
+    images: [
+      "images/social-media/sonic-wave-festival.jpg"
+    ],
+    description: "Vaporwave-inspired event announcement poster and social media flyer for Sonic Wave Music Festival at JIExpo Kemayoran, combining 3D pixel typography and neon city grid art.",
+    tags: ["Social Media Design", "Event Flyer", "Pixel Art", "Vaporwave", "Graphic Design"],
+    featured: false
+  },
+  {
+    id: "smartwatch-collection",
+    num: "16",
+    title: "SMARTWATCH COLLECTION",
+    categoryKey: "design",
+    categoryLabel: "GRAPHIC DESIGN",
+    subcategory: "SOCIAL MEDIA DESIGN",
+    subtitle: "WEARABLE TECH PROMO SERIES",
+    year: "2026",
+    image: "images/social-media/smartwatch-timeless-elegance.jpg",
+    images: [
+      "images/social-media/smartwatch-timeless-elegance.jpg",
+      "images/social-media/smartwatch-all-day-comfort.jpg"
+    ],
+    description: "Clean commercial creative series for modern smartwatches, highlighting AMOLED display clarity, magnetic wireless charging, and ergonomic styling.",
+    tags: ["Social Media Design", "Wearable Tech", "Product Ad", "Graphic Design"],
+    featured: false
+  },
+  {
+    id: "earbuds-collection",
+    num: "17",
+    title: "EARBUDS COLLECTION",
+    categoryKey: "design",
+    categoryLabel: "GRAPHIC DESIGN",
+    subcategory: "SOCIAL MEDIA DESIGN",
+    subtitle: "WIRELESS AUDIO CAMPAIGN",
+    year: "2026",
+    image: "images/social-media/earbuds-seamless-sync.jpg",
+    images: [
+      "images/social-media/earbuds-seamless-sync.jpg",
+      "images/social-media/earbuds-comfort-grid.jpg",
+      "images/social-media/earbuds-comfort-float.jpg"
+    ],
+    description: "Multi-angle product showcase and promotional feed for wireless earbuds, emphasizing instant Bluetooth pairing, water resistance, and comfortable fit.",
+    tags: ["Social Media Design", "Consumer Electronics", "Audio", "Graphic Design"],
+    featured: false
   }
-};
+];
 
+// Smooth anchor scrolling
 const scrollLinks = document.querySelectorAll('a[href^="#"]');
-
 scrollLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     const targetId = link.getAttribute("href");
     if (targetId === "#" || targetId === "") return;
-
     const targetSection = document.querySelector(targetId);
     if (targetSection) {
       e.preventDefault();
-      targetSection.scrollIntoView({
-        behavior: "smooth"
-      });
+      targetSection.scrollIntoView({ behavior: "smooth" });
     }
   });
 });
 
-const filterButtons = document.querySelectorAll(".work-filter-bar .filter-btn");
-const featuredProject = document.querySelector(".featured-project");
-const regularProjects = document.querySelectorAll(".project-item:not(.featured-project)");
-const allCards = document.querySelectorAll(".work-gallery .project-item");
+// ==========================================
+// RENDER & FILTER FUNCTIONS
+// ==========================================
+const gridContainer = document.getElementById("selectedWorkGrid");
+const filterPills = document.querySelectorAll(".work-filter-bar .filter-pill");
 
-function applyMediaElement(container, srcPath, fallbackSrc = "images/about-.png") {
-  if (!container) return;
-  const isVideo = srcPath.endsWith(".mp4") || srcPath.endsWith(".webm");
+function createCardHTML(p, isFeatured = false) {
+  const isGif = p.image.endsWith(".gif");
+  const mediaTag = isGif
+    ? `<img src="${p.image}" alt="${p.title}" class="card-media-img" loading="lazy" decoding="async">`
+    : `<img src="${p.image}" alt="${p.title}" class="card-media-img" loading="lazy" decoding="async">`;
+  const badgeLabel = p.subcategory || p.categoryLabel;
+  const imageCountBadge = (p.images && p.images.length > 1)
+    ? `<span class="card-image-count">${String(p.images.length).padStart(2, '0')} IMAGES</span>`
+    : '';
 
-  const oldMedia = container.querySelector(".project-img");
-  if (oldMedia) oldMedia.remove();
+  return `
+    <article class="work-card ${isFeatured ? 'featured-card' : ''}" data-id="${p.id}" data-category="${p.categoryKey}">
+      <div class="card-media-wrap">
+        ${mediaTag}
+        <div class="card-overlay"></div>
+      </div>
+      <span class="card-num">${p.num}</span>
+      ${imageCountBadge}
+      ${p.topMeta ? `<div class="card-top-meta">${p.topMeta}</div>` : ''}
+      <div class="card-content">
+        <span class="card-cat-pill">${badgeLabel}</span>
+        <h3 class="card-title">${p.title}</h3>
+        ${p.subtitle ? `<p class="card-subtitle">${p.subtitle}</p>` : ''}
+      </div>
+      <span class="card-arrow" aria-hidden="true">↗</span>
+    </article>
+  `;
+}
 
-  if (isVideo) {
-    const videoEl = document.createElement("video");
-    videoEl.className = "project-img";
-    videoEl.src = srcPath;
-    videoEl.autoplay = true;
-    videoEl.loop = true;
-    videoEl.muted = true;
-    videoEl.playsInline = true;
-    Object.assign(videoEl.style, {
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      display: "block"
-    });
+function createInfoPanelHTML() {
+  const countStr = String(portfolioProjects.length).padStart(2, '0');
+  return `
+    <aside class="work-info-panel">
+      <div>
+        <div class="info-panel-top-bar" aria-hidden="true"></div>
+        <h3 class="info-panel-heading">A COLLECTION OF SELECTED CREATIVE WORKS.</h3>
+        <p class="info-panel-desc">A curated collection of projects across design, photography, motion, and visual storytelling — exploring branding, campaign direction, and creative visualization.</p>
+      </div>
+      <div class="info-panel-counter">
+        <div class="info-panel-number">${countStr}</div>
+        <div class="info-panel-label">PROJECTS</div>
+      </div>
+    </aside>
+  `;
+}
 
-    videoEl.onerror = function () {
-      const fallbackImg = document.createElement("img");
-      fallbackImg.className = "project-img";
-      fallbackImg.src = fallbackSrc;
-      Object.assign(fallbackImg.style, {
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        display: "block"
-      });
-      videoEl.replaceWith(fallbackImg);
-    };
+function renderGallery(categoryKey = "all") {
+  if (!gridContainer) return;
 
-    container.prepend(videoEl);
+  const workSubtitle = document.getElementById("workSubtitle");
+  const categoryTitles = {
+    all: "CREATIVE PORTFOLIO",
+    design: "GRAPHIC DESIGN",
+    photography: "PHOTOGRAPHY",
+    motion: "MOTION GRAPHICS"
+  };
+
+  const filtered = categoryKey === "all"
+    ? portfolioProjects
+    : portfolioProjects.filter((p) => p.categoryKey === categoryKey);
+
+  const countStr = String(filtered.length).padStart(2, '0');
+  if (workSubtitle) {
+    const catLabel = categoryTitles[categoryKey] || "CREATIVE PORTFOLIO";
+    workSubtitle.textContent = `${catLabel} / 2026 (${countStr} PROJECT${filtered.length === 1 ? '' : 'S'})`;
+  }
+
+  if (categoryKey === "all") {
+    gridContainer.classList.remove("is-filtered");
+
+    // Row 1: Card 01 (Featured), Card 02, Card 03, Info Panel
+    const c1 = portfolioProjects[0];
+    const c2 = portfolioProjects[1];
+    const c3 = portfolioProjects[2];
+
+    const row1HTML = `
+      <div class="work-grid-row-1">
+        ${createCardHTML(c1, true)}
+        ${createCardHTML(c2, false)}
+        ${createCardHTML(c3, false)}
+        ${createInfoPanelHTML()}
+      </div>
+    `;
+
+    // Row 2+: All remaining cards rendered dynamically in editorial grid
+    const row2Cards = portfolioProjects.slice(3).map((p) => createCardHTML(p, false)).join("");
+    const row2HTML = `
+      <div class="work-grid-row-2">
+        ${row2Cards}
+      </div>
+    `;
+
+    gridContainer.innerHTML = row1HTML + row2HTML;
   } else {
-    const imgEl = document.createElement("img");
-    imgEl.className = "project-img";
-    imgEl.src = srcPath;
-    Object.assign(imgEl.style, {
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      display: "block"
-    });
+    gridContainer.classList.add("is-filtered");
 
-    imgEl.onerror = function () {
-      this.onerror = null;
-      this.src = fallbackSrc;
-    };
+    if (filtered.length === 0) {
+      gridContainer.innerHTML = `
+        <div class="work-empty-state">
+          <div class="empty-state-card">
+            <span class="empty-badge">ARCHIVE // 00 PROJECTS</span>
+            <h3 class="empty-title">NO PROJECTS IN ${categoryTitles[categoryKey] || 'THIS CATEGORY'} YET</h3>
+            <p class="empty-desc">New social media campaigns and visual content archives are currently in preparation and will be published soon.</p>
+            <button type="button" class="empty-reset-btn" id="emptyResetBtn">
+              EXPLORE ALL WORK (${String(portfolioProjects.length).padStart(2, '0')})
+            </button>
+          </div>
+        </div>
+      `;
 
-    container.prepend(imgEl);
-  }
-}
-
-function updateWorkGallery(categoryKey) {
-  const data = projectData[categoryKey];
-  if (!data) return;
-  
-  allCards.forEach((card) => {
-    card.classList.remove("pop-animate");
-    card.style.animationDelay = "0s";
-  });
-
-
-  void document.body.offsetHeight;
-
-  if (featuredProject) {
-    const featMedia = featuredProject.querySelector(".project-media");
-    const featNum = featuredProject.querySelector(".project-number");
-    const featCat = featuredProject.querySelector(".project-category");
-    const featTitle = featuredProject.querySelector(".project-title");
-    const featDesc = featuredProject.querySelector(".project-desc");
-
-    if (featMedia) applyMediaElement(featMedia, data.featured.image);
-    if (featNum) featNum.textContent = data.featured.number;
-    if (featCat) featCat.textContent = data.featured.category;
-    if (featTitle) featTitle.textContent = data.featured.title;
-    if (featDesc) featDesc.textContent = data.featured.description;
-    featuredProject.setAttribute("data-category", categoryKey);
-
-    featuredProject.style.animationDelay = "0.02s";
-    featuredProject.classList.add("pop-animate");
-  }
-
-  regularProjects.forEach((item, index) => {
-    const itemData = data.items[index];
-    if (itemData) {
-      const itemMedia = item.querySelector(".project-media");
-      const itemNum = item.querySelector(".project-number");
-      const itemTitle = item.querySelector(".project-title");
-
-      if (itemMedia) applyMediaElement(itemMedia, itemData.image);
-      if (itemNum) itemNum.textContent = itemData.number;
-      if (itemTitle) itemTitle.textContent = itemData.title;
-      item.setAttribute("data-category", categoryKey);
-
-      item.style.animationDelay = `${(index + 1) * 0.10}s`;
-      item.classList.add("pop-animate");
+      const resetBtn = document.getElementById("emptyResetBtn");
+      if (resetBtn) {
+        resetBtn.addEventListener("click", () => {
+          const allPill = document.querySelector('.filter-pill[data-category="all"]');
+          if (allPill) allPill.click();
+        });
+      }
+      return;
     }
+
+    const cardsHTML = filtered.map((p) => createCardHTML(p, false)).join("");
+    gridContainer.innerHTML = cardsHTML;
+  }
+
+  // Attach card click handlers for Project Detail Modal
+  attachCardEvents();
+
+  // Re-attach 3D tilt micro-interaction if enabled
+  if (typeof window.refreshCardTilt === "function") {
+    setTimeout(window.refreshCardTilt, 50);
+  }
+}
+
+// ==========================================
+// PROJECT DETAIL MODAL
+// ==========================================
+const projectModal = document.getElementById("projectModal");
+const modalBackdrop = document.getElementById("modalBackdrop");
+const modalCloseBtn = document.getElementById("modalCloseBtn");
+const modalMediaImg = document.getElementById("modalMediaImg");
+const modalPrevBtn = document.getElementById("modalPrevBtn");
+const modalNextBtn = document.getElementById("modalNextBtn");
+const modalSlideIndicator = document.getElementById("modalSlideIndicator");
+const modalNumber = document.getElementById("modalNumber");
+const modalCategory = document.getElementById("modalCategory");
+const modalSubcategory = document.getElementById("modalSubcategory");
+const modalYear = document.getElementById("modalYear");
+const modalTitle = document.getElementById("modalTitle");
+const modalSubtitle = document.getElementById("modalSubtitle");
+const modalDesc = document.getElementById("modalDesc");
+const modalTags = document.getElementById("modalTags");
+
+let currentModalProject = null;
+let currentSlideIndex = 0;
+
+function applyImageAspectRatio(img) {
+  if (!img) return;
+  const nw = img.naturalWidth;
+  const nh = img.naturalHeight;
+  if (!nw || !nh) return;
+
+  const ratio = nw / nh;
+  const dialog = document.querySelector(".project-modal-dialog");
+  const mediaWrap = document.querySelector(".modal-media-wrap");
+
+  let aspectCat = "custom";
+  let aspectStyle = `${nw} / ${nh}`;
+  let modalMaxWidth = "780px";
+
+  // Check 1:1 (Square) - threshold tolerance +/- 0.05
+  if (Math.abs(ratio - 1) <= 0.05) {
+    aspectCat = "1-1";
+    aspectStyle = "1 / 1";
+    modalMaxWidth = "580px";
+  }
+  // Check 4:3 (Standard Landscape) - threshold tolerance 1.25 - 1.42
+  else if (Math.abs(ratio - (4 / 3)) <= 0.07) {
+    aspectCat = "4-3";
+    aspectStyle = "4 / 3";
+    modalMaxWidth = "720px";
+  }
+  // Check 16:9 or Widescreen - ratio >= 1.6
+  else if (Math.abs(ratio - (16 / 9)) <= 0.12 || ratio >= 1.6) {
+    aspectCat = "16-9";
+    aspectStyle = "16 / 9";
+    modalMaxWidth = "820px";
+  }
+  // Check 3:4 (Standard Portrait) - threshold tolerance 0.70 - 0.82
+  else if (Math.abs(ratio - (3 / 4)) <= 0.07) {
+    aspectCat = "3-4";
+    aspectStyle = "3 / 4";
+    modalMaxWidth = "520px";
+  }
+  // General Portrait (< 0.95)
+  else if (ratio < 0.95) {
+    aspectCat = "portrait";
+    aspectStyle = `${nw} / ${nh}`;
+    modalMaxWidth = "500px";
+  }
+  // Other Landscape
+  else {
+    aspectCat = "landscape";
+    aspectStyle = `${nw} / ${nh}`;
+    modalMaxWidth = ratio > 1.8 ? "840px" : "740px";
+  }
+
+  if (dialog) {
+    dialog.setAttribute("data-aspect-ratio", aspectCat);
+    dialog.style.setProperty("--modal-max-width", modalMaxWidth);
+  }
+  if (mediaWrap) {
+    mediaWrap.setAttribute("data-aspect-ratio", aspectCat);
+    mediaWrap.style.setProperty("--img-aspect-ratio", aspectStyle);
+  }
+  img.style.setProperty("--img-aspect-ratio", aspectStyle);
+}
+
+function updateSlideshowView(animate = false) {
+  if (!currentModalProject) return;
+  const imgList = (currentModalProject.images && currentModalProject.images.length > 0)
+    ? currentModalProject.images
+    : [currentModalProject.image];
+  const total = imgList.length;
+
+  if (total <= 1) {
+    if (modalPrevBtn) modalPrevBtn.style.display = "none";
+    if (modalNextBtn) modalNextBtn.style.display = "none";
+    if (modalSlideIndicator) modalSlideIndicator.style.display = "none";
+  } else {
+    if (modalPrevBtn) modalPrevBtn.style.display = "flex";
+    if (modalNextBtn) modalNextBtn.style.display = "flex";
+    if (modalSlideIndicator) {
+      modalSlideIndicator.style.display = "inline-flex";
+      modalSlideIndicator.textContent = `${String(currentSlideIndex + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
+    }
+  }
+
+  const nextSrc = imgList[currentSlideIndex];
+  if (modalMediaImg) {
+    if (animate) {
+      modalMediaImg.classList.add("is-transitioning");
+      setTimeout(() => {
+        modalMediaImg.onload = () => {
+          applyImageAspectRatio(modalMediaImg);
+          modalMediaImg.classList.remove("is-transitioning");
+        };
+        modalMediaImg.src = nextSrc;
+        modalMediaImg.alt = `${currentModalProject.title} slide ${currentSlideIndex + 1}`;
+        if (modalMediaImg.complete && modalMediaImg.naturalWidth > 0) {
+          applyImageAspectRatio(modalMediaImg);
+          modalMediaImg.classList.remove("is-transitioning");
+        }
+      }, 120);
+    } else {
+      modalMediaImg.onload = () => applyImageAspectRatio(modalMediaImg);
+      modalMediaImg.src = nextSrc;
+      modalMediaImg.alt = `${currentModalProject.title} slide ${currentSlideIndex + 1}`;
+      if (modalMediaImg.complete && modalMediaImg.naturalWidth > 0) {
+        applyImageAspectRatio(modalMediaImg);
+      }
+    }
+  }
+}
+
+function nextSlide() {
+  if (!currentModalProject) return;
+  const imgList = (currentModalProject.images && currentModalProject.images.length > 0)
+    ? currentModalProject.images
+    : [currentModalProject.image];
+  if (imgList.length <= 1) return;
+  currentSlideIndex = (currentSlideIndex + 1) % imgList.length;
+  updateSlideshowView(true);
+}
+
+function prevSlide() {
+  if (!currentModalProject) return;
+  const imgList = (currentModalProject.images && currentModalProject.images.length > 0)
+    ? currentModalProject.images
+    : [currentModalProject.image];
+  if (imgList.length <= 1) return;
+  currentSlideIndex = (currentSlideIndex - 1 + imgList.length) % imgList.length;
+  updateSlideshowView(true);
+}
+
+function openProjectModal(projectId) {
+  const p = portfolioProjects.find((item) => item.id === projectId);
+  if (!p || !projectModal) return;
+
+  currentModalProject = p;
+  currentSlideIndex = 0;
+
+  updateSlideshowView(false);
+
+  if (modalNumber) modalNumber.textContent = p.num;
+  if (modalCategory) modalCategory.textContent = p.categoryLabel;
+  if (modalSubcategory) {
+    if (p.subcategory) {
+      modalSubcategory.textContent = p.subcategory;
+      modalSubcategory.style.display = "inline-block";
+    } else {
+      modalSubcategory.style.display = "none";
+    }
+  }
+  if (modalYear) modalYear.textContent = p.year || "2026";
+  if (modalTitle) modalTitle.textContent = p.title;
+  if (modalSubtitle) modalSubtitle.textContent = p.subtitle || "";
+  if (modalDesc) modalDesc.textContent = p.description;
+
+  if (modalTags) {
+    modalTags.innerHTML = (p.tags || [])
+      .map((tag) => `<span class="modal-tag-pill">${tag}</span>`)
+      .join("");
+  }
+
+  projectModal.classList.add("is-open");
+  projectModal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeProjectModal() {
+  if (!projectModal) return;
+  projectModal.classList.remove("is-open");
+  projectModal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+  currentModalProject = null;
+  currentSlideIndex = 0;
+}
+
+if (modalPrevBtn) {
+  modalPrevBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    prevSlide();
   });
 }
 
-filterButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    filterButtons.forEach((button) => button.classList.remove("active"));
-    btn.classList.add("active");
+if (modalNextBtn) {
+  modalNextBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    nextSlide();
+  });
+}
 
-    const selectedCategory = btn.getAttribute("data-category");
-    updateWorkGallery(selectedCategory);
+if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeProjectModal);
+if (modalBackdrop) modalBackdrop.addEventListener("click", closeProjectModal);
+
+window.addEventListener("keydown", (e) => {
+  if (!projectModal || !projectModal.classList.contains("is-open")) return;
+  if (e.key === "Escape") {
+    closeProjectModal();
+  } else if (e.key === "ArrowLeft") {
+    e.preventDefault();
+    prevSlide();
+  } else if (e.key === "ArrowRight") {
+    e.preventDefault();
+    nextSlide();
+  }
+});
+
+function attachCardEvents() {
+  const cards = gridContainer ? gridContainer.querySelectorAll(".work-card") : [];
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const projId = card.getAttribute("data-id");
+      if (projId) openProjectModal(projId);
+    });
+  });
+}
+
+// Category filter click events
+filterPills.forEach((pill) => {
+  pill.addEventListener("click", () => {
+    filterPills.forEach((p) => {
+      p.classList.remove("active");
+      p.setAttribute("aria-selected", "false");
+    });
+    pill.classList.add("active");
+    pill.setAttribute("aria-selected", "true");
+
+    const cat = pill.getAttribute("data-category");
+    renderGallery(cat);
   });
 });
+
+// Initial Gallery Render
+renderGallery("all");
 
 const heroCategories = document.querySelectorAll(".hero-categories .category-pill");
 
@@ -267,14 +754,18 @@ heroCategories.forEach((pill) => {
       targetCategory = "photography";
     } else if (pillText.includes("MOTION")) {
       targetCategory = "motion";
+    } else {
+      // Both "DESIGN GRAFIS" and "SOCIAL MEDIA DESIGN" point to unified Graphic Design
+      targetCategory = "design";
     }
 
-    filterButtons.forEach((btn) => {
-      const btnCategory = btn.getAttribute("data-category");
-      btn.classList.toggle("active", btnCategory === targetCategory);
+    filterPills.forEach((p) => {
+      const isMatch = p.getAttribute("data-category") === targetCategory;
+      p.classList.toggle("active", isMatch);
+      p.setAttribute("aria-selected", isMatch ? "true" : "false");
     });
 
-    updateWorkGallery(targetCategory);
+    renderGallery(targetCategory);
 
     const workSection = document.querySelector("#work");
     if (workSection) {

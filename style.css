@@ -9,6 +9,25 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+html {
+    scrollbar-width: none !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+html, body {
+    cursor: url('images/cursor-3d.png') 0 0, auto;
+}
+
+a, button, .btn {
+    cursor: url('images/cursor-pointer.png') 0 0, pointer;
+}
+
 body {
     width: 100vw;
     min-height: 100vh;
@@ -30,6 +49,7 @@ body {
     height: 100vh;
     z-index: 0;
     pointer-events: none;
+    transform: translateZ(0);
     background-size: 36px 36px;
     background-image: 
         linear-gradient(to right, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
@@ -44,6 +64,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    transform: translateZ(0);
     background: repeating-linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.08) 0px,
